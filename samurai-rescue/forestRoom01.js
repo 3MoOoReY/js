@@ -31,19 +31,19 @@ class forestRoom01 extends Phaser.Scene {
     // Call first time without a loop
         this.time.addEvent({
             delay: 100,
-            callback: moveRightLeft,
+            callback: moveRightLeft3,
             callbackScope: this,
             loop: false,
           });
         this.time.addEvent({
             delay: 100,
-            callback: moveRightLeft2,
+            callback: moveRightLeft4,
             callbackScope: this,
             loop: false,
           });
         this.time.addEvent({
             delay: 100,
-            callback: moveSquare,
+            callback: moveSquare2,
             callbackScope: this,
             loop: false,
             });
@@ -167,7 +167,7 @@ class forestRoom01 extends Phaser.Scene {
 }
 
 
-function moveRightLeft() {
+function moveRightLeft3() {
     console.log("moveRightLeft");
     this.tweens.timeline({
       targets: this.slimeG01,
@@ -188,7 +188,7 @@ function moveRightLeft() {
     });
   }
 
-  function moveRightLeft2() {
+  function moveRightLeft4() {
     console.log("moveRightLeft");
     this.tweens.timeline({
       targets: this.slimeG02,
@@ -209,7 +209,7 @@ function moveRightLeft() {
     });
   }
 
-  function moveSquare() {
+  function moveSquare2() {
     console.log("moveSquare");
     this.tweens.timeline({
       targets: this.slimeG03,
