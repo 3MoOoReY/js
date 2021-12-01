@@ -31,19 +31,19 @@ class abandonedCity01 extends Phaser.Scene {
     // Call first time without a loop
         this.time.addEvent({
             delay: 100,
-            callback: moveRightLeft5,
+            callback: moveRightLeft3,
             callbackScope: this,
             loop: false,
           });
         this.time.addEvent({
             delay: 100,
-            callback: moveRightLeft6,
+            callback: moveRightLeft4,
             callbackScope: this,
             loop: false,
           });
         this.time.addEvent({
             delay: 100,
-            callback: moveSquare3,
+            callback: moveSquare2,
             callbackScope: this,
             loop: false,
             });
@@ -178,7 +178,7 @@ class abandonedCity01 extends Phaser.Scene {
 }
 
 
-function moveRightLeft5() {
+function moveRightLeft3() {
     // console.log("moveRightLeft");
     this.tweens.timeline({
       targets: this.slime01,
@@ -199,7 +199,7 @@ function moveRightLeft5() {
     });
   }
 
-  function moveRightLeft6() {
+  function moveRightLeft4() {
     // console.log("moveRightLeft");
     this.tweens.timeline({
       targets: this.slime02,
@@ -220,7 +220,7 @@ function moveRightLeft5() {
     });
   }
 
-  function moveSquare3() {
+  function moveSquare2() {
     // console.log("moveSquare");
     this.tweens.timeline({
       targets: this.slime03,
