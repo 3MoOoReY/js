@@ -163,13 +163,13 @@ class forestRoom01 extends Phaser.Scene {
 
     world(player, tile){
         console.log("Welcome back the World");
-        this.scene.start("gameScene");
+        this.scene.start("bigworld");
     }
 }
 
 
 function moveRightLeft1() {
-    console.log("moveRightLeft");
+    // console.log("moveRightLeft");
     this.tweens.timeline({
       targets: this.slimeG01,
       loop: -1, // loop forever
@@ -190,7 +190,7 @@ function moveRightLeft1() {
   }
 
   function moveRightLeft2() {
-    console.log("moveRightLeft");
+    // console.log("moveRightLeft");
     this.tweens.timeline({
       targets: this.slimeG02,
       loop: -1, // loop forever
@@ -211,7 +211,7 @@ function moveRightLeft1() {
   }
 
   function moveSquare1() {
-    console.log("moveSquare");
+    // console.log("moveSquare");
     this.tweens.timeline({
       targets: this.slimeG03,
       ease: "Linear",

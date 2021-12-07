@@ -21,7 +21,7 @@ class startscreen extends Phaser.Scene {
 
         spaceDown.on('down', function(){
             console.log("Spacebar pressed, goto storyline");
-            this.scene.start("bigworld");
+            this.scene.start("storyline");
             }, this );
 
 
