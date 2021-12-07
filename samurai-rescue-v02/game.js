@@ -1,8 +1,8 @@
 var config = {
     type: Phaser.AUTO,
     ////// pixel size * tile map size * zoom 
-    width: 32 * 10,
-    height: 32 * 10,
+    width: 700,
+    height: 450,
     /////////////////////////////////////////
     physics: {
         default: 'arcade',
