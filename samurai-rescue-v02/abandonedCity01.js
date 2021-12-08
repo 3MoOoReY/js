@@ -140,7 +140,7 @@ class abandonedCity01 extends Phaser.Scene {
 
     update() {
 
-        if(this.player.x > 920 && this.player.x < 950
+        if(this.player.x > 908 && this.player.x < 919
             && this.player.y >63.67 && this.player.y < 158){
                 this.world()
             }

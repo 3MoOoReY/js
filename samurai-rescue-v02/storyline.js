@@ -10,7 +10,7 @@ class storyline extends Phaser.Scene {
     
     preload(){
     // instructions2
-    this.load.image('storylinePNG', 'assets/screens/Screen_02.jpg');
+    this.load.image('storylinePNG', 'assets/screens/Screen_02.png');
 
     }
 

@@ -17,6 +17,7 @@ class forestRoom01 extends Phaser.Scene {
     // this.load.tilemapTiledJSON('forest','assets/forest.json');
 
         this.load.image('forestPNG', 'assets/mapImgs/forest-tileset.png');
+        this.load.image('greenRingPNG', 'assets/pngs/greenRing.png');
 
     // Samurai Character
         this.load.spritesheet('hero', 'assets/SamuraiHero.png', { frameWidth: 32, frameHeight: 32 });
@@ -50,6 +51,10 @@ class forestRoom01 extends Phaser.Scene {
 
 
         // End of loop
+
+        // collectables
+
+        this.greenRing = this.physics.add.sprite (894, 129, "greenRingPNG").setScale(0.5);
 
     // Step 4 Load the game tiles
     // 1st parameter is name in Tiled,
@@ -125,16 +130,24 @@ class forestRoom01 extends Phaser.Scene {
     this.physics.add.collider(this.objectsLayer, this.player);
     
 
+    this.physics.add.overlap(
+      this.player,
+      this.greenRing,
+      this.collectRing,
+      null,
+      this
+    );
+
     }
 
-    update() {
+  update() {
 
         if(this.player.x > 10 && this.player.x < 23
             && this.player.y >288 && this.player.y < 353){
                 this.world()
             }
 
-
+        
         if (this.cursors.left.isDown) 
         {
             this.player.setVelocityX(-200);
@@ -159,7 +172,7 @@ class forestRoom01 extends Phaser.Scene {
             this.player.body.setVelocity(0, 0);
         } 
 
-    } // End of Update
+  } // End of Update
 
     world(player, tile){
         console.log("Welcome back the World");

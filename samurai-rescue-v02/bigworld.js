@@ -189,4 +189,42 @@ class bigworld extends Phaser.Scene {
         this.scene.start("cave03");
     }
 
+
+
+    collectRings(player, ring) {
+        console.log("collect Fish");
+    
+        // bomb sound
+        this.bombSnd.play();
+    
+        // Shake screen
+        this.cameras.main.shake(2000);
+    
+        fish.disableBody(true, true);
+    
+        window.greenFish = window.greenFish + 1;
+        console.log("greenFish: ", window.greenFish);
+    
+        this.greenScore.setText("green fish: " + window.greenFish);
+    
+        // Display fish icon as fishes are collected
+        if (window.greenFish == 0) {
+          this.greenFishIcon1.setVisible(false);
+          this.greenFishIcon2.setVisible(false);
+          this.greenFishIcon3.setVisible(false);
+        } else if (window.greenFish == 1) {
+          this.greenFishIcon1.setVisible(true);
+        } else if (window.greenFish == 2) {
+          this.greenFishIcon1.setVisible(true);
+          this.greenFishIcon2.setVisible(true);
+        } else if (window.greenFish == 3) {
+          this.greenFishIcon1.setVisible(true);
+          this.greenFishIcon2.setVisible(true);
+          this.greenFishIcon3.setVisible(true);
+        }
+    
+        // score += 10;
+        // scoreText.setText('Score: ' + score);
+      }
+
 }
