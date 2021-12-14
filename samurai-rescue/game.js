@@ -18,7 +18,7 @@ var config = {
     pixelArt: true,
     //// Add all scenes below in the array
     scene: [
-            // startscreen, storyline, instruction01, instruction02, instruction03, rule01, 
+            startscreen, storyline, instruction01, instruction02, instruction03, rule01, 
             bigworld, 
             forestRoom01,
             abandonedCity01, 
